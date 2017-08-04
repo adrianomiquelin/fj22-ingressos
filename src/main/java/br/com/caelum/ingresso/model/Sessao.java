@@ -29,14 +29,12 @@ public class Sessao {
 	 * @deprecated 
 	 */
 	public Sessao() {
-		super();
 	}
 
 	public Sessao(LocalTime horario, Sala sala, Filme filme) {
-		super();
 		this.horario = horario;
 		this.sala = sala;
-		this.filme = filme;
+		this.setFilme(filme);
 		this.preco = sala.getPreco().add(filme.getPreco());
 	}
 
